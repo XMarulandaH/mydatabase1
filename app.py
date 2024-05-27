@@ -35,7 +35,7 @@ st.markdown(
 # Ajustar el tamaño de la imagen
 image = Image.open('images2.jpg')
 st.markdown('<div class="image-container">', unsafe_allow_html=True)
-st.image(image, width=500, output_format='auto', use_column_width=True)
+st.image(image, width=400, output_format='auto', use_column_width=True)
 st.markdown('</div>', unsafe_allow_html=True)
 
 uploaded_file = st.file_uploader('Choose a file')
