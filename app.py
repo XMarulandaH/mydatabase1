@@ -5,7 +5,7 @@ from PIL import Image
 # Centrar el texto del título
 st.markdown(
     """
-    <h1 style="color: green; text-align: center;">Análisis de datos de Sensores en Mi Ciudad</h1>
+    <h2 style="color: green; text-align: center;">Análisis de datos del sensor de temperatura y humedad de mi compostador</h2>
     """, unsafe_allow_html=True
 )
 
@@ -35,7 +35,7 @@ st.markdown(
 # Ajustar el tamaño de la imagen
 image = Image.open('images.jpg')
 st.markdown('<div class="image-container">', unsafe_allow_html=True)
-st.image(image, width=500)
+st.image(image, width=500, output_format='auto', use_column_width=True)
 st.markdown('</div>', unsafe_allow_html=True)
 
 uploaded_file = st.file_uploader('Choose a file')
