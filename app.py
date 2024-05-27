@@ -5,7 +5,7 @@ from PIL import Image
 # Centrar el texto del título
 st.markdown(
     """
-    <h1 style="color: red; text-align: center;">Análisis de datos de Sensores en Mi Ciudad</h1>
+    <h1 style="color: green; text-align: center;">Análisis de datos de Sensores en Mi Ciudad</h1>
     """, unsafe_allow_html=True
 )
 
@@ -14,7 +14,7 @@ st.markdown(
     """
     <style>
     body {
-        background-color: #e6f7ff;
+        background-color: #B9DBBA;
     }
     </style>
     """, unsafe_allow_html=True
@@ -51,9 +51,6 @@ if uploaded_file is not None:
    st.subheader('Estadísticos básicos de los sensores.')
    st.dataframe(df1["temperatura ESP32"].describe())
    
-   st.subheader('Humedad')
-   st.dataframe(df1["Humedad"].describe())
-   
    min_temp = st.slider('Selecciona valor mínimo del filtro ', min_value=-10, max_value=45, value=23, key=1)
    # Filtrar el DataFrame utilizando query
    filtrado_df_min = df1.query(f"`temperatura ESP32` > {min_temp}")
@@ -72,4 +69,5 @@ if uploaded_file is not None:
    
 else:
  st.warning('Necesitas cargar un archivo csv excel.')
+
 
