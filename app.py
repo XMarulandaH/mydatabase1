@@ -3,21 +3,21 @@ import streamlit as st
 from PIL import Image
 
 # Cambiar el color del título
-st.markdown('<h2 style="color: green;">Análisis de datos de sensor de humedad y temperatura para mi compostador</h2>', unsafe_allow_html=True)
+st.markdown('<h2 style="color: green; text-align: center;">Análisis de datos del sensor de humedad y temperatura para mi compostador</h2>', unsafe_allow_html=True)
 
 # Cambiar el color de fondo de la página
 st.markdown(
     """
     <style>
     body {
-        background-color: #e6f7ff;
+        background-color: #F8F4E8;
     }
     </style>
     """, unsafe_allow_html=True
 )
 
 image = Image.open('images.jpg')
-st.image(image)
+st.image(image, width=500)
 
 uploaded_file = st.file_uploader('Choose a file')
 
