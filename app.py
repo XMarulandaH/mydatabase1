@@ -10,14 +10,14 @@ st.markdown(
     """
     <style>
     body {
-        background-color: #F8F4E8;
+        background-color: #E8F8EA;
     }
     </style>
     """, unsafe_allow_html=True
 )
 
 image = Image.open('images.jpg')
-st.image(image, width=500)
+st.image(image, width=600, output_format='auto', use_column_width=True)
 
 uploaded_file = st.file_uploader('Choose a file')
 
